@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>博客</title>
+</head>
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/view.css">
+
+<body>
+	<div id="topimg"></div>
+	<div id="menu">
+		<ul>
+			{%if category==''%}
+			<li class="log"><a href="/">首页</a></li>
+			{%else%}
+			<li><a href="/">首页</a></li>
+			{%endif%}
+
+			{%for cate in categories%}
+			{%if category==cate.id%}
+			<li><a href="/?category={{cate.id}}" class="log">{{cate.name}}</a></li>
+			{%else%}
+			<li><a href="/?category={{cate.id}}">{{cate.name}}</a></li>
+			{%endif%}
+			{%endfor%}
+		</ul>
+	</div>
+	<div id="content">
+		<div class="content_article">
+
+			<div class="article">
+				<div class="article_title">
+					<p>{{content.title}}</p>
+				</div>
+				<div class="article_author">
+					<span>作者</span>
+					<span>{{content.user.username}}</span>
+					<span>时间</span>
+					<span>2017</span>
+					<span>阅读</span>
+					<span>0</span>
+					<span>评论</span>
+					<span>1</span>
+				</div>
+				<div class="article_introduce">
+					<p>{{content.content}}</p>
+				</div>
+			</div>
+			
+			<div id="pinglun">
+				<div class="luntitle">
+					<div class="luntext">评论</div>
+					<div class="lunshu">一共有<span>0</span>条评论</div>
+				</div>
+				{% if userInfo._id %}
+				<div class="luninput">
+					<textarea class="elementlun"></textarea>
+					<input type="hidden" id="contentId" value="{{content.id}}" />
+					<div class="lunbtn">提交</div>
+				</div>
+				{%else%}
+				<div class="lunerror">
+					<p>您还没有登录,请先登录</p>
+				</div>
+				{%endif%}
+				<div class="lunul">
+					<h5>还没有留言</h5>
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="conetnt_ajax">
+
+			{% if userInfo._id %}
+			<div class="userInfo">
+				<div class="userInfo_top">用户信息</div>
+				<div class="username">{{userInfo.username}}</div>
+				
+				{% if userInfo.isAdmin %}
+				<div class="info">你好，管理员</div>
+				<a href="/admin">进入管理首页</a>
+				{% else %}
+				<div class="info">你好，欢迎光临我的博客</div>
+				{% endif %}
+
+				<div class="tuichu">退出</div>
+			</div>
+			{% else %}
+			<div class="login">
+				<div class="login_top">
+					登录
+				</div>
+				<div class="login_name">
+					用户名<input type="text" name="name" />
+				</div>
+				<div class="login_pass">
+					密码<input type="password" name="password" />
+				</div>
+				<div class="login_btn">
+					<div class="login_button">登录</div>
+				</div>
+				<div class="login_change">
+					<div class="login_text">还没注册？<span>马上注册</span></div>
+					<div class="warom"></div>
+				</div>
+			</div> 
+			{%endif%}
+			<div class="newuser">
+				<div class="newuser_top">
+					注册
+				</div>
+				<div class="newuser_name">
+					用户名<input type="text" name="username" />
+				</div>
+				<div class="newuser_pass">
+					密码<input type="password" name="password" />
+				</div>
+				<div class="newuser_rgpass">
+					再次确认<input type="password" name="repassword" />
+				</div>
+				<div class="newuser_btn">
+					<div class="newuser_button">提交</div>
+				</div>
+				<div class="newuser_change">
+					<div class="newuser_text">已有账号？<span>马上登录</span></div>
+					<div class="warom"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="/js/jq.min.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/view.js"></script>
+</body>
+</html>

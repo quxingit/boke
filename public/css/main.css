@@ -1,0 +1,342 @@
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+body{
+	background: #ccc;
+}
+#topimg{
+	width: 100%;
+	height: 200px;
+	background: url("/img/top_bg.jpg");
+	background-size: 100% 100%;
+}
+
+#menu{
+	width: 100%;
+	height: 60px;
+	padding:1px;
+	box-sizing: border-box;
+}
+#menu ul{
+	display: inline-block;
+	width: 80%;
+	margin-top:20px;
+	margin-left: 10%;
+}
+#menu ul:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+#menu ul{
+	zoom:1;
+}
+#menu ul li{
+	float: left;
+	margin-left: 5%;
+	font-size: 20px;
+	color: blue;
+}
+
+#menu ul li:first-child{
+	margin-left: 5%;
+}
+
+#menu .log{
+	color: black;
+}
+#content{
+	width: 100%;
+	background:#ccc;
+}
+#content:after{
+	content: '';
+	clear: both;
+	display: block;	
+}
+#content{
+	zoom:1;
+}
+.content_article{
+	width: 50%;
+	margin-left: 10%;
+	float: left;
+}
+.article{
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+	background: #fff;
+}
+.article_title{
+	width: 100%;
+	height: 80px;
+	padding:1px;
+	box-sizing: border-box;
+}
+.article_title p{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 42px;
+}
+.article_author{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+.article_author span{
+	line-height: 40px;
+
+}
+
+.article_introduce{
+	width: 100%;
+	background: #fff;
+}
+.article_introduce p{
+	line-height: 30px;
+	text-indent: 30px;
+	word-break:break-word;
+}
+
+.article_btn{
+	height: 80px;
+	width: 100%;
+}
+.article_btn a{
+	margin-top: 40px;
+	margin-left:20px;
+	outline: none;
+	display: inline-block;
+	background: orange;
+	border:none;
+	font-size:14px;
+	padding:10px;
+}
+
+
+.conetnt_ajax{
+	float: left;
+	width: 40%;
+	margin-top: 50px;
+}
+
+.login{
+	width: 60%;
+	height: 200px;
+	margin-left:10%;
+	background: #fff;
+}
+.login_top{
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-top: 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+}
+.login_name{
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	line-height: 40px;
+	text-indent: 10px;
+}
+.login_pass{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 25px;
+}
+.login_btn{
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 1px;
+}
+.login_change{
+	width: 100%;
+	height: 40px;
+}
+.login_name input{
+	height: 20px;
+	width: 60%;
+	outline: none;
+}
+.login_pass input{
+	height: 20px;
+	width: 60%;
+	outline: none;
+}
+
+.login_button{
+	height: 30px;
+	width:60%;
+	margin:5px auto;
+	background: orange;	
+	line-height: 30px;
+	text-align: center;
+	cursor:pointer; 
+}
+
+.login_text{
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.login_text span{
+	color: orange;
+}
+
+
+.newuser{
+	width: 60%;
+	height: 240px;
+	margin-left:10%;
+	margin-top: 10px;
+	background: #fff;
+	display: none;
+}
+.newuser_top{
+	width: 100%;
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+}
+.newuser_name{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+}
+.newuser_pass{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 25px;
+}
+.newuser_rgpass{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 0px;
+}
+.newuser_btn{
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 1px;
+}
+.newuser_change{
+	width: 100%;
+	height: 40px;
+}
+.newuser_name input{
+	height: 20px;
+	width: 60%;
+	outline: none;
+}
+.newuser_pass input{
+	height: 20px;
+	width: 60%;
+	outline: none;
+}
+.newuser_rgpass input{
+	height: 20px;
+	width: 60%;
+	outline: none;
+}
+
+.newuser_button{
+	height: 30px;
+	width:60%;
+	margin:5px auto;
+	background: orange;	
+	line-height: 30px;
+	text-align: center;
+	cursor:pointer; 
+}
+
+.newuser_change{
+	width: 100%;
+	height: 40px;
+}
+.warom{
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+	color: red;
+}
+.newuser_text{
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.newuser_text span{
+	color: orange;
+}
+
+.userInfo{
+	width: 60%;
+	height: 240px;
+	margin-left:10%;
+	margin-top: 10px;
+	background: #fff;	
+}
+
+.userInfo_top{
+	width: 100%;
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+}
+
+.username{
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	color: red;
+}
+
+.info{
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	color: green;
+}
+.tuichu{
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	color: blue;
+}
+
+#page{
+	width: 100%;
+	height: 60px;
+	margin-top: 30px;
+}
+
+#page ul{
+	width: 100%;
+	height: 100%;
+	background: #ccc
+}
+#page ul li{
+	float: left;
+	width: 30%;
+	height: 100%;
+	margin-left:3%;
+	text-align:center;
+	line-height: 60px;
+}
+

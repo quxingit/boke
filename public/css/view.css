@@ -1,0 +1,100 @@
+#pinglun{
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	margin-top: 20px;
+}
+
+.luntitle{
+	width: 100%;
+	height:60px;
+}
+
+.lunshu{
+	float: right;
+	height: 100%;
+	line-height: 60px;
+}
+
+.luntext{
+	float: left;
+	height: 100%;
+	line-height: 60px;
+}
+
+.luninput{
+	width: 95%;
+	margin: 0 auto;
+	background: blue;
+
+}
+.luninput textarea{
+	height: 60px;
+	width: 85%;
+	float: left;
+	outline: none;
+	border: 1px solid blue;
+	font-size: 14px;
+}
+.lunbtn{
+	float: left;
+	background: blue;
+	width: 12%;
+	height: 100%;
+	line-height: 60px;
+	text-align: center;
+}
+
+.luninput:after{
+	clear: both;
+	content: '';
+    display: block;
+}
+
+.luninput{
+	 zoom: 1;
+}
+
+.lunerror{
+	background: red;
+}
+
+.lunerror p{
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+
+.lunul{
+	width: 100%;
+	height: 300px;
+	overflow-y: scroll;
+	background: #fff;	
+}
+
+.lunul ul{
+	
+	width: 100%;
+}
+
+.lunul ul li{
+	width: 90%;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.lunul ul li .bujv{
+	height: 30px;
+	width: 100%;
+}
+
+.bujvzhe{
+	float: left;
+	height: 100%;
+	line-height: 30px;
+}
+.bujvtime{
+	float: right;
+	line-height: 30px;
+}
